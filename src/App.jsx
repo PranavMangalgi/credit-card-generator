@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import {  useState } from 'react'
 import './App.css'
-// import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function App() {
@@ -14,10 +15,28 @@ function App() {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
+    let hasError = false;
     if(name.length===0||cardNum.length===0||cvc.length===0){
       setError(true);
+      hasError=true;
+    }else{
+      setError(false)
+    }
+    
+    if(!hasError) {
+      toast.success(`Success!`, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
   }
+  
   
   const cardNumberInput = (e) =>{
     let inputValue = e.target.value.replace(/\s/g, ''); 
@@ -85,6 +104,7 @@ function App() {
             </div>
             
             <button onClick={handleSubmit}>Confirm</button>
+            <ToastContainer/>
           </form>
       </div>
     </>
