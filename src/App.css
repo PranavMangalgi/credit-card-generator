@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter','sans-serif';
+}
+
+:root{
+  --font-color: #220930;
+}
+
+#root{
+  display: flex;
+}
+
+.rectangle{
+  width: 35vw;
+  height: 100vh;
+  background-image: url('./assets/Rectangle-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.form-container{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 65vw;
+}
+
+.form-container form{
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  
+}
+
+.form-container .all{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  
+}
+
+.form-container label{
+  color: var(--font-color);
+  text-transform: uppercase;
+  font-weight: 700 ;
+  font-size: .8rem;
+}
+
+.form-container input{
+  padding: .55rem;
+  width: 100%;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  background: #FFF;
+}
+
+.form-container input::placeholder{
+  color: #BBB9BC;
+  font-family: Inter;
+  font-size: .85rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.date-container{
+  width: 170px;
+}
+.inside-date>input{
+  margin-right: 15px ;
+}
+.date-container input{
+  width: 70px;
+}
+
+.form-container button{
+  padding: .65rem 2.2rem;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: var(--font-color);
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.cvc-date{
+  display: flex;
+  
+}
+.cvc input{
+  width: 90px;
+}
+
+label.error{
+  color:red;
+  text-transform: none;
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+.show-details{
+  width: 350px;
+  height: 200px;
+  background-image: url('./assets/bg-card.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  position: absolute;
+  top: 120px;
+  left: 130px;
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ellipse1{
+  background: url('./assets/Ellipse_1.png');
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+
+.ellipse2{
+  background: url('./assets/Ellipse_2.png');
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  align-self:center;
+}
+
+.ellipses{
+  display: flex;
+  gap: 1rem;
+  height: 70px;
+}
+
+.card-info{
+  text-align: center;
+}
+
+.card-info .card-number{
+  width: 100%;
+  font-size: 1.65rem;
+}
+
+.card-info .last-div{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-top: .5rem;
+}
+
+.show-cvc{
+  background: url('./assets/cvc-bg.jpg');
+  width: 350px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+}
+.show-cvc div{
+  margin-top: 3%;
+}
